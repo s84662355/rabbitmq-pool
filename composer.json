@@ -1,0 +1,34 @@
+{
+  "name": "cjh/rabbitmq-pool",
+  "type": "library",
+  "version": "v1.0.0",
+  "keywords": [
+    "php",
+    "swoole",
+    "swoft",
+    "rabbitmq"
+  ],
+  "description": "swoft rabbitmq component",
+  "license": "Apache-2.0",
+  "require": {
+    "swoft/framework": "~2.0.0",
+    "swoft/connection-pool": "~2.0.0"
+  },
+  "autoload": {
+    "classmap": [
+    ],
+    "psr-4": {
+      "cjh\\Rabbitmq\\": "src/"
+    },
+    "files": [
+    ]
+  },
+  "autoload-dev": {
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5"
+  },
+  "scripts": {
+
+  }
+}
