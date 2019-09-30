@@ -6,7 +6,7 @@
  * Time: 10:25
  */
 
-namespace cjh\Rabbitmq\Listener;
+namespace cjh\Rabbitmq ;
 
 
 

@@ -11,7 +11,7 @@ use Swoft\Event\Annotation\Mapping\Listener;
 use Swoft\Event\EventHandlerInterface;
 use Swoft\Event\EventInterface;
 use Swoft\SwoftEvent;
-
+use cjh\Rabbitmq\ConnectionManager;
 /**
  * Class CoroutineDestoryListener
  *

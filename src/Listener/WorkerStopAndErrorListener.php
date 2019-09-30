@@ -13,7 +13,8 @@ use Swoft\Event\EventSubscriberInterface;
 use Swoft\Log\Helper\CLog;
 use Swoft\Server\SwooleEvent;
 use Swoft\SwoftEvent;
-
+use cjh\Rabbitmq\ConnectionManager;
+use cjh\Rabbitmq\Pool;
 /**
  * Class WorkerStopAndErrorListener
  *
@@ -42,13 +43,13 @@ class WorkerStopAndErrorListener implements EventSubscriberInterface
      */
     public function handle(EventInterface $event): void
     {
-     //   $pools = BeanFactory::getBeans(Pool::class);
+        $pools = BeanFactory::getBeans(Pool::class);
 
         /* @var Pool $pool */
-       // foreach ($pools as $pool) {
-        //    $count = $pool->close();
+       foreach ($pools as $pool) {
+            $count = $pool->close();
 
-        //    CLog::info('Close %d redis connection on %s!', $count, $event->getName());
-      //  }
+            CLog::info('Close %d redis connection on %s!', $count, $event->getName());
+       }
     }
 }

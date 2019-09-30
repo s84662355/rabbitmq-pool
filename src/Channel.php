@@ -25,7 +25,7 @@ class Channel extends AbstractConnection
     public function initialize(Pool $pool, RedisDb $redisDb)
     {
         $this->pool     = $pool;
-        $this->redisDb  = $redisDb;
+
         $this->lastTime = time();
 
         $this->id = $this->pool->getConnectionId();

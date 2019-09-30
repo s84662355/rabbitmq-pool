@@ -11,6 +11,7 @@ use Swoft\Event\Annotation\Mapping\Listener;
 use Swoft\Event\EventHandlerInterface;
 use Swoft\Event\EventInterface;
 use Swoft\SwoftEvent;
+use cjh\Rabbitmq\ConnectionManager;
 
 /**
  * Class CoroutineDeferListener
@@ -31,9 +32,9 @@ class CoroutineDeferListener implements EventHandlerInterface
     {
 
         /* @var ConnectionManager $conManager */
-        /*
+
        $conManager = BeanFactory::getBean(ConnectionManager::class);
        $conManager->release();
-       */
+
     }
 }
